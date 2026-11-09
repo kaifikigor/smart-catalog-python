@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Умный каталог — отчет по данным</title>
+<style>
+:root {font-family:Inter,Arial,sans-serif;color:#18302d;background:#f6f8f7;}
+*{box-sizing:border-box} body{margin:0} .wrap{max-width:1050px;margin:auto;padding:42px 22px 80px}
+.top{display:flex;align-items:center;gap:12px;margin-bottom:38px} .logo{width:39px;height:39px;border-radius:12px;background:#16665c;color:white;display:grid;place-items:center;font-weight:800;font-size:24px}
+small,.muted{color:#71847e} h1{font-size:clamp(30px,4vw,46px);letter-spacing:-.045em;margin:0 0 10px} h2{font-size:22px;margin:30px 0 17px}
+.lead{color:#657973;margin:0 0 34px;line-height:1.6}.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.kpi,.panel{background:#fff;border:1px solid #e4ebe8;border-radius:18px;box-shadow:0 6px 25px rgba(22,60,49,.035)}
+.kpi{padding:24px 20px}.kpi strong{display:block;font-size:30px;letter-spacing:-.03em;margin-top:10px}.kpi .name{font-size:13px;color:#72817c}
+.panel{padding:22px;overflow-x:auto}table{width:100%;border-collapse:collapse;text-align:left;font-size:14px;min-width:540px}
+th{background:#f4f7f5;color:#52675e;font-weight:650} td,th{padding:15px 13px;border-bottom:1px solid #edf1ef}tr:last-child td{border-bottom:0}
+.pill{display:inline-block;border-radius:8px;background:#e0f4ec;color:#116a50;padding:7px 11px;font-size:12px;font-weight:700}
+.foot{margin-top:30px;font-size:13px;color:#7b8985;line-height:1.7}.accent{color:#167364}
+@media(max-width:720px){.wrap{padding-top:28px}.kpis{grid-template-columns:repeat(2,1fr)}.kpi{padding:18px 15px}.kpi strong{font-size:25px}}
+</style></head><body><main class="wrap"><div class="top"><span class="logo">✓</span><div><b>УМНЫЙ КАТАЛОГ</b><br><small>Python · обработка таблиц</small></div></div>
+<div class="pill">Демонстрационный отчет</div><h1>Порядок в данных.<br><span class="accent">Без ручной проверки.</span></h1>
+<p class="lead">Объединение CSV-файлов, проверка ошибок и повторяющихся артикулов. Все расчеты выполнены программой.</p>
+<section class="kpis"><div class="kpi"><span class="name">Исходных файлов</span><strong>3</strong></div>
+<div class="kpi"><span class="name">Товаров в каталоге</span><strong>11</strong></div>
+<div class="kpi"><span class="name">Найдено ошибок и дублей</span><strong>4</strong></div>
+<div class="kpi"><span class="name">Стоимость остатков</span><strong>64387.30 ₽</strong></div></section>
+<h2>Категории товаров</h2><div class="panel"><table><thead><tr><th>Категория</th><th>Позиций</th><th>Остаток, шт.</th><th>Стоимость остатков</th></tr></thead><tbody><tr><td>Бакалея</td><td>4</td><td>72</td><td>18100.80 ₽</td></tr>
+<tr><td>Канцелярия</td><td>2</td><td>88</td><td>6973.50 ₽</td></tr>
+<tr><td>Посуда</td><td>3</td><td>39</td><td>19540.00 ₽</td></tr>
+<tr><td>Электроника</td><td>2</td><td>33</td><td>19773.00 ₽</td></tr></tbody></table></div>
+<h2>Обнаруженные проблемы</h2><div class="panel"><table><thead><tr><th>Файл</th><th>Строка</th><th>Артикул</th><th>Описание ошибки</th></tr></thead><tbody><tr><td>02_warehouse.csv</td><td>5</td><td>A-101</td><td>Повтор артикула: уже встречался в файле 01_store.csv</td></tr>
+<tr><td>02_warehouse.csv</td><td>6</td><td>D-402</td><td>Остаток должен быть целым неотрицательным числом</td></tr>
+<tr><td>03_supplier.csv</td><td>4</td><td>—</td><td>Пустой артикул</td></tr>
+<tr><td>03_supplier.csv</td><td>5</td><td>C-303</td><td>Цена должна быть больше нуля</td></tr></tbody></table></div>
+<p class="foot">Отчет создан локально, без передачи данных сторонним сервисам. Цены и остатки в примере вымышлены.
+<br>Стоимость остатков рассчитывается как цена × количество; это не бухгалтерская оценка запасов.</p>
+</main></body></html>
